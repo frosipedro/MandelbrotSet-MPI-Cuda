@@ -23,7 +23,7 @@ Este projeto calcula e renderiza o conjunto de Mandelbrot utilizando duas formas
 - OpenMPI ou MPICH
 - GCC/G++
 - Make
-- GPU NVIDIA com compute capability 8.9+ (RTX 5070 TI)
+- GPU NVIDIA
 
 ## 📁 Estrutura do Projeto
 
@@ -66,7 +66,7 @@ Isso criará o executável em `bin/mandelbrot`.
 mpirun -np 4 ./bin/mandelbrot
 
 # Ver ajuda
-mpirun -np 1 ./bin/mandelbrot --help
+./bin/mandelbrot --help
 ```
 
 ### Com parâmetros personalizados:
@@ -239,7 +239,7 @@ Este projeto foi desenvolvido para demonstrar o uso combinado de:
 O overhead alto é normal quando você tem:
 
 - Imagem pequena com poucos processos
-- GPU muito rápida (RTX 5070 TI processa rápido demais!)
+- GPU muito rápida
 
 **Para reduzir o overhead:**
 
@@ -270,20 +270,7 @@ sudo apt-get install openmpi-bin libopenmpi-dev
 
 Certifique-se de que o CUDA Toolkit está instalado e `/usr/local/cuda/bin` está no PATH.
 
-## 📈 Resultados Esperados
+## 👤 Autores
 
-Com uma RTX 5070 TI e resolução 8192x8192:
-
-- **1 processo**: ~5-10 segundos
-- **2 processos**: ~5-10 segundos (speedup ~1.8x)
-- **4 processos**: ~5-10 segundos (speedup ~3.5x)
-
-_Nota: O speedup pode variar dependendo do hardware e da sobrecarga de comunicação MPI._
-
-## 📄 Licença
-
-Este projeto é de uso educacional.
-
-## 👤 Autor
-
-Desenvolvido como projeto acadêmico para estudo de computação paralela.
+- Cristian dos Santos Siquiera — https://github.com/CristianSSiqueira
+- Pedro Rockenbach Frosi — https://github.com/frosipedro
