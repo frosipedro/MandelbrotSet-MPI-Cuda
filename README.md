@@ -2,6 +2,17 @@
 
 Implementação paralela do conjunto de Mandelbrot usando MPI (memória distribuída) e CUDA (GPU).
 
+O Conjunto de Mandelbrot é um dos fractais mais conhecidos e estudados na matemática. Ele é gerado a partir de uma fórmula simples:
+
+  zₙ₊₁ = zₙ² + c
+
+Nessa equação, c é um número complexo fixo e a iteração começa com z₀ = 0. Para cada valor de c, executamos essa iteração várias vezes e observamos o comportamento da sequência.
+Se ela permanece limitada (ou seja, não cresce sem controle), então c faz parte do Conjunto de Mandelbrot. Caso contrário, ele fica fora.
+
+Ao representar graficamente todos esses valores, surge uma figura fractal: uma forma que possui detalhes infinitos e padrões que se repetem conforme aproximamos a imagem. Apesar de sua origem simples, o Mandelbrot se tornou um símbolo da complexidade gerada por regras básicas.
+
+Esse conjunto é amplamente usado para estudar sistemas dinâmicos, visualizar fractais e testar algoritmos de computação de alto desempenho, já que seu cálculo envolve muitas operações repetidas e independentes.
+
 ## 📋 Descrição
 
 Este projeto calcula e renderiza o conjunto de Mandelbrot utilizando duas formas de paralelismo:
@@ -274,3 +285,4 @@ Certifique-se de que o CUDA Toolkit está instalado e `/usr/local/cuda/bin` est�
 
 - Cristian dos Santos Siquiera — https://github.com/CristianSSiqueira
 - Pedro Rockenbach Frosi — https://github.com/frosipedro
+
